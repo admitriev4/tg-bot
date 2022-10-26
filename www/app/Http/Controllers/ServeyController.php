@@ -11,7 +11,7 @@ class ServeyController extends Controller
     public function index() {
         $model = new Servey();
         $serveys = $model->getList();
-        return view('bot.actions', [
+        return view('bot.serveys', [
             'title' => "Список пользователей",
             'serveys' => $serveys
         ]);
@@ -26,11 +26,11 @@ class ServeyController extends Controller
     public function serveyUpdate(Request $request) {
         $model = new Servey();
         $model->updateServey($request);
-        return Redirect::to('/bot/');
+        return Redirect::to('/serveys/');
     }
     public function serveyDelete(Request $request) {
         $model = new Servey();
         $model->deleteServey($request->id);
-        return Redirect::to('/bot/');
+        return Redirect::to('/serveys/');
     }
  }

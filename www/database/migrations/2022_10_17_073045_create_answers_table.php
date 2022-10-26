@@ -15,11 +15,11 @@ class CreateAnswersTable extends Migration
     {
         Schema::create('answers', function (Blueprint $table) {
             $table->id();
-            $table->bigInteger('answer')->unsigned();
+            $table->bigInteger('servey')->unsigned();
             $table->string('name_user_tg');
             $table->string('chat_id');
             $table->string('passage_time');
-            $table->timestamps();
+            $table->timestamps('date_answer');
 
 
         });

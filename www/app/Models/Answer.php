@@ -35,15 +35,7 @@ class Answer extends Model
         return $servey;
 
     }
-    public function updateAnswer($request) {
-        $req = DB::table('serveys')->where('id', "=" , $request->id)->update([
-            'answer' => $request->answer,
-            'name_user_tg' => $request->answer,
-            'chat_id' => $request->answer,
-            'passage_time' => $request->answer,
-        ]);
-        return $req;
-    }
+
     public function deleteAnswer($id) {
         DB::table('answers')->where('id', '=', $id)->delete();
     }

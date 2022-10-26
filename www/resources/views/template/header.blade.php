@@ -17,7 +17,7 @@
         <div class="menu">
             @if (!empty(Auth::user()))
                 <a href="/users/" class="btn">Пользователи</a>
-                <a href="/bot/" class="btn">Управление ботом</a>
+                <a href="/serveys/" class="btn">Опросы</a>
                 @else
                 <a href="/" class="btn">Главная</a>
                 <a href="/registration/" class="btn">Регистрация</a>

@@ -8,6 +8,7 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\BotController;
 use App\Http\Controllers\ServeyController;
+use App\Http\Controllers\AnswerController;
 
 
 /*
@@ -28,25 +29,22 @@ Route::get('/', function () {
 } })->name('main');
 
 // bot
-Route::get('/bot/', [ServeyController::class, 'index']);
+Route::get('/serveys/', [ServeyController::class, 'index']);
 Route::post('/sendMessageBot', [BotController::class, 'sendMessage']);
 Route::get('/sendDocumentBot', [BotController::class, 'sendDocument']);
 Route::get('/sendButtonsBot', [BotController::class, 'sendSurvey']);
 
-Route::get('/servey/show/add/', function () { return view('bot.servey', ['title' => 'Добавить опрос']); })->middleware('auth');
+Route::get('/servey/show/add/', function () { return view('bot.serveyadd', ['title' => 'Добавить опрос']); })->middleware('auth');
 Route::get('/servey/show/update/{id}', function ($id) { return view('bot.serveyupdate', ['title' => 'Обновить опрос', 'id'=> $id]); })->middleware('auth');
 Route::get('/servey/show/delete/{id}', function ($id) { return view('bot.serveydelete', ['title' => 'Удалить опрос', 'id'=> $id]); })->middleware('auth');
 Route::post('/servey/add/', [ServeyController::class, 'serveyAdd'])->middleware('auth');
 Route::post('/servey/update/{id}', [ServeyController::class, 'serveyUpdate'])->middleware('auth');
 Route::post('/servey/delete/{id}', [ServeyController::class, 'serveyDelete'])->middleware('auth');
 
-Route::get('/servey/show/answer/{id}', function () { return view('bot.answer', ['title' => 'Просмотр ответов']); })->middleware('auth');
-Route::get('/answer/show/add', function () { return view('bot.servey', ['title' => 'Добавить ответ']); })->middleware('auth');
-Route::get('/answer/show/update/{id}', function ($id) { return view('bot.serveyupdate', ['title' => 'Обновить ответ', 'id'=> $id]); })->middleware('auth');
+Route::get('/servey/show/answer/{id}', [AnswerController::class, 'index'])->middleware('auth');
+Route::post('/answer/add/', [AnswerController::class, 'answerAdd'])->middleware('auth');
 Route::get('/answer/show/delete/{id}', function ($id) { return view('bot.serveydelete', ['title' => 'Удалить ответ', 'id'=> $id]); })->middleware('auth');
-Route::post('/answer/add/', [ServeyController::class, 'serveyAdd'])->middleware('auth');
-Route::post('/answer/update/{id}', [ServeyController::class, 'serveyUpdate'])->middleware('auth');
-Route::post('/answer/delete/{id}', [ServeyController::class, 'serveyDelete'])->middleware('auth');
+Route::post('/answer/delete/{id}', [AnswerController::class, 'answerDelete'])->middleware('auth');
 
 
 
