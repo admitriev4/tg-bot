@@ -1,0 +1,56 @@
+version: "2"
+services:
+  www:
+    build:
+      context: ./docker/php
+      dockerfile: Dockerfile
+    image: php:8.0.3-apache
+    hostname: chat
+    ports:
+      - 8000:80
+    working_dir: /var/www/html
+    volumes:
+      - ./www:/var/www/html
+    links:
+      - db:db
+      - nginx:nginx
+    networks:
+      - default
+  db:
+    image: mysql
+    hostname: chat_db
+    ports:
+      - 3306:3306
+    environment:
+      MYSQL_DATABASE: chat
+      MYSQL_USER: user
+      MYSQL_PASSWORD: test
+      MYSQL_ROOT_PASSWORD: test
+    volumes:
+      - persistent:/var/lib/mysql
+    networks:
+      - default
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    links:
+      - db:db
+    ports:
+      - 8001:80
+    environment:
+      MYSQL_USER: user
+      MYSQL_PASSWORD: test
+      MYSQL_ROOT_PASSWORD: test
+    networks:
+      - default
+  nginx:
+    build:
+      context: ./docker/nginx
+      dockerfile: Dockerfile
+    image: nginx:alpine
+    hostname: chat_nginx
+    ports:
+      - 443:443
+    networks:
+        - default
+volumes:
+  persistent:
