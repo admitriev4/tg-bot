@@ -4,10 +4,11 @@
         <p class="title-big">Создать опрос</p>
         <form action="/public/servey/add" method="post" enctype="multipart/form-data">
             {{ csrf_field() }}
-            <input name="question" type="text" placeholder="Вопрос" maxlength="50">
-            <input name="picture" type="file" placeholder="Файл">
-            <input name="time_active" type="text" placeholder="Дата активности" maxlength="50">
             <span><input name="active" type="checkbox" id="active" placeholder="Активность" ><label for="active">Активность</label></span>
+            <span>Вопрос </span><input name="question" type="text"  maxlength="50">
+            <span>Картинка </span><input name="picture" type="file" placeholder="Файл">
+            <span>Начало активности </span><input name="active_from" type="date">
+            <span>Окончание активности </span><input name="active_to" type="date">
             <input type="submit" value="Отправить" class="btn">
         </form>
     </div>

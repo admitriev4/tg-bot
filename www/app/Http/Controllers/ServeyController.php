@@ -19,8 +19,8 @@ class ServeyController extends Controller
 
     public function serveyAdd(Request $request) {
         $model = new Servey();
-        $model->addServey($request);
-        return Redirect::to('/bot/');
+        $id = $model->addServey($request);
+        return Redirect::to('/servey/show/update/'.$id);
     }
 
     public function serveyUpdate(Request $request) {

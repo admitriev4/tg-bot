@@ -40,7 +40,7 @@ Route::post('/servey/add/', [ServeyController::class, 'serveyAdd'])->middleware(
 Route::post('/servey/update/{id}', [ServeyController::class, 'serveyUpdate'])->middleware('auth');
 Route::post('/servey/delete/{id}', [ServeyController::class, 'serveyDelete'])->middleware('auth');
 
-Route::get('/servey/show/answer/{id}', function () { return view('bot.servey', ['title' => 'Просмотр ответов']); })->middleware('auth');
+Route::get('/servey/show/answer/{id}', function () { return view('bot.answer', ['title' => 'Просмотр ответов']); })->middleware('auth');
 Route::get('/answer/show/add', function () { return view('bot.servey', ['title' => 'Добавить ответ']); })->middleware('auth');
 Route::get('/answer/show/update/{id}', function ($id) { return view('bot.serveyupdate', ['title' => 'Обновить ответ', 'id'=> $id]); })->middleware('auth');
 Route::get('/answer/show/delete/{id}', function ($id) { return view('bot.serveydelete', ['title' => 'Удалить ответ', 'id'=> $id]); })->middleware('auth');

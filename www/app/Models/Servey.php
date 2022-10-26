@@ -16,15 +16,13 @@ class Servey extends Model
 
     public function addServey(Request $request) {
         $active = ($request->active == "on") ? "Y" : "N";
-        $active_from = $request->time_active;
-        $active_to = $request->time_active;
         $picturePath = Storage::putFile('public', $request->picture);
-        $req = DB::table('serveys')->insert([
+        $req = DB::table('serveys')->insertGetId([
             'question' => $request->question,
             'picture' => $picturePath,
             'active' => $active,
-            'active_from' => $active_from,
-            'active_to' => $active_to,
+            'active_from' => $request->active_from,
+            'active_to' => $request->active_to,
         ]);
         return $req;
     }
@@ -36,7 +34,7 @@ class Servey extends Model
     public function getServey($id) {
 
             $servey = DB::table('serveys')
-                ->select('id', 'question','picture', 'active', 'time_active')
+                ->select('id', 'question','picture', 'active', 'active_from', 'active_to')
                 ->where('id', '=', $id)
                 ->get();
             return $servey;
@@ -49,7 +47,8 @@ class Servey extends Model
             'question' => $request->question,
             'picture' => $picturePath,
             'active' => $active,
-            'time_active' => $request->time_active,
+            'active_from' => $request->active_from,
+            'active_to' => $request->active_to,
         ]);
         return $req;
     }

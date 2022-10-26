@@ -277,17 +277,14 @@ p {
     border: 1px solid black;
 }
 .servey-item-top {
-    display: grid;
-    grid-template-columns: 0.2fr 1.5fr 3fr 1fr 1fr 1fr 1fr;
     font-weight: bold;
     border: 1px solid black;
     height: 50px;
-    grid-gap: 3px;
 
 }
 .servey-item {
     display: grid;
-    grid-template-columns: 0.2fr 1.5fr 3fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 0.2fr 0.2fr 1.5fr 3fr 1fr 1fr 1fr;
     border: 1px solid black;
     grid-gap: 3px;
 

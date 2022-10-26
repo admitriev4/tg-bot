@@ -1,7 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5ab15ea9-502f-4acd-b9da-7aff7ea78e49" name="Default Changelist" comment="" />
+    <list default="true" id="5ab15ea9-502f-4acd-b9da-7aff7ea78e49" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/www/resources/views/bot/answer.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/www/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/app/Http/Controllers/ServeyController.php" beforeDir="false" afterPath="$PROJECT_DIR$/www/app/Http/Controllers/ServeyController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/app/Models/Servey.php" beforeDir="false" afterPath="$PROJECT_DIR$/www/app/Models/Servey.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/public/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/www/public/css/styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/resources/css/template-styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/www/resources/css/template-styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/resources/views/bot/actions.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/www/resources/views/bot/actions.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/resources/views/bot/servey.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/www/resources/views/bot/servey.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/resources/views/bot/serveyupdate.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/www/resources/views/bot/serveyupdate.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/www/routes/web.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -10,6 +22,9 @@
   <component name="ComposerSettings" doNotAsk="true">
     <pharConfigPath>$PROJECT_DIR$/www/composer.json</pharConfigPath>
     <execution />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
@@ -125,6 +140,7 @@
     </include_path>
   </component>
   <component name="ProjectId" id="2G4VF9NaN5qs9TtbJ2Hj3TSPVBK" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -177,11 +193,34 @@
       <workItem from="1666124060287" duration="5743000" />
       <workItem from="1666169391025" duration="100000" />
       <workItem from="1666339712628" duration="594000" />
-      <workItem from="1666780507417" duration="1407000" />
+      <workItem from="1666780507417" duration="5830000" />
     </task>
+    <task id="LOCAL-00001" summary="init">
+      <created>1666782062098</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1666782062098</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="init" />
+    <option name="LAST_COMMIT_MESSAGE" value="init" />
   </component>
 </project>
