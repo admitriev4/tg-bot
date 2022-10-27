@@ -19,7 +19,7 @@ class CreateAnswersTable extends Migration
             $table->string('name_user_tg');
             $table->string('chat_id');
             $table->string('passage_time');
-            $table->timestamps('date_answer');
+            $table->timestamp('date_answer', 0);
 
 
         });

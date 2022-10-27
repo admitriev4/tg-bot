@@ -26,8 +26,8 @@ class AnswerController extends Controller
     }
 
     public function AnswerDelete(Request $request) {
-        /*$model = new Servey();
-        $model->deleteServey($request->id);
-        return Redirect::to('/bot/');*/
+        $model = new Answer();
+        $model->deleteAnswer($request->id);
+        return Redirect::to('/serveys/');
     }
 }

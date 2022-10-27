@@ -14,7 +14,7 @@ class CreateCommunication extends Migration
     public function up()
     {
         Schema::table('answers', function (Blueprint $table) {
-            $table->foreign('answer')->references('id')->on('serveys');
+            $table->foreign('servey')->references('id')->on('serveys');
         });
     }
 
