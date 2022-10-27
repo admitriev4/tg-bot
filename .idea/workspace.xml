@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5ab15ea9-502f-4acd-b9da-7aff7ea78e49" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/app/Http/Controllers/AnswerController.php" beforeDir="false" afterPath="$PROJECT_DIR$/www/app/Http/Controllers/AnswerController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/database/migrations/2022_10_17_073045_create_answers_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/www/database/migrations/2022_10_17_073045_create_answers_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -147,17 +147,17 @@
     <property name="WebServerToolWindowPanel.toolwindow.show.date" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/www/resources/views/bot" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/docker/lt" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Мой ноут\Desktop\docker-projects\tg-bot\docker\lt" />
       <recent name="C:\Users\Мой ноут\Desktop\docker-projects\tg-bot\www\resources\views\bot" />
       <recent name="C:\Users\Мой ноут\Desktop\docker-projects\tg-bot" />
       <recent name="C:\Users\Мой ноут\Desktop\docker-projects\tg-bot\www" />
       <recent name="C:\Users\Мой ноут\Desktop\docker-projects\tg-bot\www\resources\css" />
-      <recent name="C:\Users\Мой ноут\Desktop\docker-projects\tg-bot\www\app\Http\Controllers" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Мой ноут\Desktop\docker-projects\tg-bot\www\storage\app\public" />
@@ -186,7 +186,7 @@
       <workItem from="1666169391025" duration="100000" />
       <workItem from="1666339712628" duration="594000" />
       <workItem from="1666780507417" duration="9184000" />
-      <workItem from="1666857519270" duration="2303000" />
+      <workItem from="1666857519270" duration="11438000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1666782062098</created>
@@ -209,7 +209,14 @@
       <option name="project" value="LOCAL" />
       <updated>1666790902952</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="migration">
+      <created>1666860313017</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1666860313017</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -231,6 +238,7 @@
     <MESSAGE value="init" />
     <MESSAGE value="опросы доработанные" />
     <MESSAGE value="доработка ответов" />
-    <option name="LAST_COMMIT_MESSAGE" value="доработка ответов" />
+    <MESSAGE value="migration" />
+    <option name="LAST_COMMIT_MESSAGE" value="migration" />
   </component>
 </project>
