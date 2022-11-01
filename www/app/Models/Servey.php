@@ -13,6 +13,10 @@ use Illuminate\Support\Facades\Storage;
 class Servey extends Model
 {
     use HasFactory, Notifiable;
+    public $id;
+    public $question;
+    public $picture;
+
 
     public function addServey(Request $request) {
         $active = ($request->active == "on") ? "Y" : "N";
@@ -37,7 +41,7 @@ class Servey extends Model
                 ->select('id', 'question','picture', 'active', 'active_from', 'active_to')
                 ->where('id', '=', $id)
                 ->get();
-            return $servey;
+            return $servey->all()[0];
 
     }
     public function updateServey($request) {

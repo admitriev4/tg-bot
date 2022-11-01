@@ -2,9 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5ab15ea9-502f-4acd-b9da-7aff7ea78e49" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/app/Helpers/Telegram.php" beforeDir="false" afterPath="$PROJECT_DIR$/www/app/Helpers/Telegram.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/app/Http/Controllers/BotController.php" beforeDir="false" afterPath="$PROJECT_DIR$/www/app/Http/Controllers/BotController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/app/Http/Controllers/ServeyController.php" beforeDir="false" afterPath="$PROJECT_DIR$/www/app/Http/Controllers/ServeyController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/app/Http/Middleware/VerifyCsrfToken.php" beforeDir="false" afterPath="$PROJECT_DIR$/www/app/Http/Middleware/VerifyCsrfToken.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/app/Models/Servey.php" beforeDir="false" afterPath="$PROJECT_DIR$/www/app/Models/Servey.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/www/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -186,7 +191,15 @@
       <workItem from="1666169391025" duration="100000" />
       <workItem from="1666339712628" duration="594000" />
       <workItem from="1666780507417" duration="9184000" />
-      <workItem from="1666857519270" duration="11438000" />
+      <workItem from="1666857519270" duration="12786000" />
+      <workItem from="1666961772757" duration="1567000" />
+      <workItem from="1667202814386" duration="4112000" />
+      <workItem from="1667220155354" duration="599000" />
+      <workItem from="1667247263415" duration="6155000" />
+      <workItem from="1667281759487" duration="599000" />
+      <workItem from="1667285177647" duration="597000" />
+      <workItem from="1667286759953" duration="1199000" />
+      <workItem from="1667288871519" duration="9107000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1666782062098</created>
@@ -216,7 +229,14 @@
       <option name="project" value="LOCAL" />
       <updated>1666860313017</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="README и localtunnel">
+      <created>1666874815824</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1666874815824</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -239,6 +259,7 @@
     <MESSAGE value="опросы доработанные" />
     <MESSAGE value="доработка ответов" />
     <MESSAGE value="migration" />
-    <option name="LAST_COMMIT_MESSAGE" value="migration" />
+    <MESSAGE value="README и localtunnel" />
+    <option name="LAST_COMMIT_MESSAGE" value="README и localtunnel" />
   </component>
 </project>

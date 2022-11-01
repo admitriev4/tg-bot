@@ -25,11 +25,13 @@ namespace App\Helpers;
     /**
      * @return mixed
      */
-    public function sendDocument($chatID, $file) {
-        return $this->http::attach('document', $file, 'document.png')
-            ->post(self::url.$this->bot.'/sendDocument', [
-                'chat_id' => $chatID,
-            ]);
+    public function sendPhoto($chatID, $file, $caption) {
+        return $this->http::post(self::url.$this->bot.'/sendPhoto', [
+            'chat_id' => $chatID,
+            'photo' => $file,
+            'caption' => $caption,
+            'parse_mode' => "html"
+        ]);
     }
 
     public function sendSurvey($chatID, $message, $buttons) {
@@ -40,6 +42,14 @@ namespace App\Helpers;
             'reply_markup' => $buttons
         ]);
     }
+
+     public function setWebhook($url) {
+         return $this->http::get(self::url.$this->bot.'/setWebhook?url='.$url);
+     }
+
+     public function getWebhookUpdates() {
+         return $this->http::get(self::url.$this->bot.'/getWebhookInfo');
+     }
 
 
 

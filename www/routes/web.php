@@ -30,9 +30,13 @@ Route::get('/', function () {
 
 // bot
 Route::get('/serveys/', [ServeyController::class, 'index']);
-Route::post('/sendMessageBot', [BotController::class, 'sendMessage']);
+/*Route::get('/sendMessageBot', [BotController::class, 'sendMessage']);
 Route::get('/sendDocumentBot', [BotController::class, 'sendDocument']);
-Route::get('/sendButtonsBot', [BotController::class, 'sendSurvey']);
+Route::get('/sendButtonsBot', [BotController::class, 'sendSurvey']);*/
+Route::get('/setwebhook', [BotController::class, 'setWebhook']);
+Route::get('/getwebhook', [BotController::class, 'getWebhook']);
+Route::post('/webhook', [BotController::class, 'webhook']);
+
 
 Route::get('/servey/show/add/', function () { return view('bot.serveyadd', ['title' => 'Добавить опрос']); })->middleware('auth');
 Route::get('/servey/show/update/{id}', function ($id) { return view('bot.serveyupdate', ['title' => 'Обновить опрос', 'id'=> $id]); })->middleware('auth');

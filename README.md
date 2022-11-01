@@ -7,4 +7,4 @@
 <code>npm install -g localtunnel</code><br>
 <p>Для того что бы использовать localtunnel выполните команду. Команда вернет ссылку на приложение</p>
 <code>lt --port 8000</code>
-<code>lt --port 3306</code>
+
