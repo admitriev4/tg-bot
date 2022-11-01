@@ -30,9 +30,6 @@ Route::get('/', function () {
 
 // bot
 Route::get('/serveys/', [ServeyController::class, 'index']);
-/*Route::get('/sendMessageBot', [BotController::class, 'sendMessage']);
-Route::get('/sendDocumentBot', [BotController::class, 'sendDocument']);
-Route::get('/sendButtonsBot', [BotController::class, 'sendSurvey']);*/
 Route::get('/setwebhook', [BotController::class, 'setWebhook']);
 Route::get('/getwebhook', [BotController::class, 'getWebhook']);
 Route::post('/webhook', [BotController::class, 'webhook']);

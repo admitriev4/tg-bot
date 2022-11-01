@@ -12,7 +12,6 @@ use App\Http\Controllers\ServeyController;
 
 class BotController extends Controller
 {
-    /*protected $chat_id = '966505653';*/
     protected $telegram;
     protected $ServeyController;
     public function __construct()
@@ -51,35 +50,6 @@ class BotController extends Controller
         }
 
     }
-
-    /*public function sendMessage() {
-       return $this->telegram->sendMessage($this->chat_id, 'sdfsdfsdf');
-
-    }*/
-    /*public function sendDocument() {
-        $file = Storage::disk('public')->get('1.png');
-        $file = mb_convert_encoding($file, 'UTF-8', 'UTF-8');
-        return $this->telegram->sendPhoto($this->chat_id, $file, 'asdas');
-    }*/
-    /*public function sendSurvey() {
-        $message="Проверка кнопок";
-        $buttons = [
-            'inline_keyboard' => [
-                [
-                    [
-                        'text' => 'button1',
-                        'callback_data' => '1'
-                    ],
-                    [
-                        'text' => 'button2',
-                        'callback_data' => '2'
-                    ]
-                ]
-            ]
-        ];
-
-        return $this->telegram->sendSurvey($this->chat_id, $message, $buttons);
-    }*/
 
 
 
