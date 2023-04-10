@@ -265,42 +265,21 @@ p {
     width: 100%;
     height: 100px;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     justify-content: center;
-    border: 1px solid black;
 }
 .serveys-list {
     width: 100%;
     min-height: 150px;
-    display: grid;
     border: 1px solid black;
 }
 .servey-item-top {
     font-weight: bold;
-    border: 1px solid black;
-    height: 50px;
-
 }
-.servey-item {
-    display: grid;
-    grid-template-columns: 0.2fr 0.2fr 1.5fr 3fr 1fr 1fr 1fr;
-    border: 1px solid black;
-    grid-gap: 3px;
-
-}
-
-.servey-item-top span{
-    border: 1px solid black;
-    justify-content: center;
-    align-items: center;
+.servey-item  td{
     padding: 5px;
-}
-.servey-item  span{
     border: 1px solid black;
-    justify-content: center;
-    align-items: center;
-    padding: 5px;
 }
 
 

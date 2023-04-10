@@ -26,7 +26,8 @@ Route::get('/', function () {
         return view('main', ['title' => 'Главная']);
     } else {
         return Redirect::to('/users/');
-} })->name('main');
+    }
+})->name('main');
 
 // bot
 Route::get('/serveys/', [ServeyController::class, 'index']);

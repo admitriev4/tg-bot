@@ -1,37 +1,38 @@
 @include('template.header')
 <div class="wrapper main-container">
 <div class="serveys-container">
+    <p class="title-big center">Опросы</p>
     <div class="servey-actions">
-        <p class="title-big">Опросы</p>
+        <a href="/setwebhook" class="btn">Установить WebHook</a>
         <a href="/servey/show/add/" class="btn">Создать опрос</a>
 
     </div>
-    <div class="serveys-list">
-        <div class="servey-item servey-item-top">
-            <span>ID</span>
-            <span>Активность</span>
-            <span>Вопрос</span>
-            <span>Картинка</span>
-            <span>Начало активности</span>
-            <span>Окончание активности</span>
-            <span>Действия</span>
-        </div>
+    <table class="serveys-list">
+        <tr class="servey-item servey-item-top">
+            <td>ID</td>
+            <td>Активность</td>
+            <td>Вопрос</td>
+            <td>Картинка</td>
+            <td>Начало активности</td>
+            <td>Окончание активности</td>
+            <td>Действия</td>
+        </tr>
         @foreach ($serveys as $servey)
-            <div class="servey-item">
-                <span>{{ $servey->id }}</span>
-                <span>{{ $servey->active }}</span>
-                <span>{{ $servey->question }}</span>
-                <span>{{ $servey->picture }}</span>
-                <span>{{ $servey->active_from }}</span>
-                <span>{{ $servey->active_to }}</span>
-                <span>
+            <tr class="servey-item">
+                <td>{{ $servey->id }}</td>
+                <td>{{ $servey->active }}</td>
+                <td>{{ $servey->question }}</td>
+                <td>{{ $servey->picture }}</td>
+                <td>{{ $servey->active_from }}</td>
+                <td>{{ $servey->active_to }}</td>
+                <td>
                     <a href="/servey/show/update/{{ $servey->id }}" class="btn">Изменить опрос</a>
                     <a href="/servey/show/delete/{{ $servey->id }}" class="btn">Удалить опрос</a>
                     <a href="/servey/show/answer/{{ $servey->id }}" class="btn">Посмотреть ответы</a>
-                </span>
-            </div>
+                </td>
+            </tr>
         @endforeach
-    </div>
+    </table>
 </div>
 
 
