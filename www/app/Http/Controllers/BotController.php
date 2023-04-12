@@ -29,34 +29,24 @@ class BotController extends Controller
     }
 
     public function  webhook (Request $request) {
-//        Log::debug("___________________________________________________________");
-//        Log::debug("___________________________________________________________");
-//        Log::debug($request->all());
-//        Log::debug("___________________________________________________________");
-//        if(!empty($request->input('message'))) {
-//            Log::debug('1');
-//            if($request->input('message')['text'] == "/start") {
-//                $buttons = $this->ServeyController->getListServey();
-//                $this->telegram->sendSurvey($request->input('message')['from']['id'], 'Выберите опрос', $buttons);
-//            }
-//        } else {
-//            $req = $request->input('callback_query');
-//            /*if (strpos($req['data'], "servey_id_") === false) {
-//                //Log::debug("Строка  не найдена в строке");
-//            } else {
-//                $id = explode('_', $req['data'])[2];
-//                $servey = $this->ServeyController->getServey($id);
-//                $picture = \request()->getHost() . Storage::url($servey->picture);
-//                $r = $this->telegram->sendPhoto($req['from']['id'], $picture, $servey->question);
-//                //Log::debug($r);
-//            }*/
-//            Log::debug('2');
-//
-//        }
-//
-//        Log::debug("___________________________________________________________");
-//        Log::debug("___________________________________________________________");
 
+        if(!empty($request->input('message'))) {
+            if($request->input('message')['text'] == "/start") {
+                $buttons = $this->ServeyController->getListServey();
+                $this->telegram->sendSurvey($request->input('message')['from']['id'], 'Выберите опрос', $buttons);
+            }
+        } else {
+            $req = $request->input('callback_query');
+            if (strpos($req['data'], "servey_id_") !== false) {
+                $id = explode('_', $req['data'])[2];
+                $servey = $this->ServeyController->getServey($id);
+                $picture = \request()->getHost() . Storage::url($servey->picture);
+                $this->telegram->sendPhoto($req['from']['id'], $picture, $servey->question);
+
+            }
+
+        }
+        Log::debug($request->all());
     }
 
 

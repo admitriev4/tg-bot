@@ -20,9 +20,9 @@ class AnswerController extends Controller
     }
 
     public function AnswerAdd(Request $request) {
-        /*$model = new Servey();
-        $id = $model->addServey($request);
-        return Redirect::to('/servey/show/update/'.$id);*/
+        $model = new Answer();
+        $model->addAnswer($request);
+        return Redirect::to('/servey/show/answer/'.$request->servey);
     }
 
     public function AnswerDelete(Request $request) {

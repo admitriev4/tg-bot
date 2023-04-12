@@ -2,14 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5ab15ea9-502f-4acd-b9da-7aff7ea78e49" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/www/database/migrations/2023_04_10_132032_add_serveys.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/app/Helpers/Telegram.php" beforeDir="false" afterPath="$PROJECT_DIR$/www/app/Helpers/Telegram.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/app/Http/Controllers/AnswerController.php" beforeDir="false" afterPath="$PROJECT_DIR$/www/app/Http/Controllers/AnswerController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/www/app/Http/Controllers/BotController.php" beforeDir="false" afterPath="$PROJECT_DIR$/www/app/Http/Controllers/BotController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/app/Http/Controllers/ServeyController.php" beforeDir="false" afterPath="$PROJECT_DIR$/www/app/Http/Controllers/ServeyController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/app/Http/Middleware/VerifyCsrfToken.php" beforeDir="false" afterPath="$PROJECT_DIR$/www/app/Http/Middleware/VerifyCsrfToken.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/app/Models/Servey.php" beforeDir="false" afterPath="$PROJECT_DIR$/www/app/Models/Servey.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/www/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/app/Models/Answer.php" beforeDir="false" afterPath="$PROJECT_DIR$/www/app/Models/Answer.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,6 +19,13 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="hiddenUrls">
+      <set>
+        <option value="https://github.com/admitriev4/tg-bot" />
+      </set>
+    </option>
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
@@ -199,7 +203,27 @@
       <workItem from="1667281759487" duration="599000" />
       <workItem from="1667285177647" duration="597000" />
       <workItem from="1667286759953" duration="1199000" />
-      <workItem from="1667288871519" duration="9107000" />
+      <workItem from="1667288871519" duration="9545000" />
+      <workItem from="1667305697154" duration="610000" />
+      <workItem from="1667487443273" duration="6000" />
+      <workItem from="1667556825269" duration="595000" />
+      <workItem from="1667726324336" duration="6019000" />
+      <workItem from="1667806046161" duration="13000" />
+      <workItem from="1667812701851" duration="5000" />
+      <workItem from="1668608158962" duration="1191000" />
+      <workItem from="1668665584307" duration="47000" />
+      <workItem from="1672646327390" duration="1762000" />
+      <workItem from="1673245579490" duration="853000" />
+      <workItem from="1677497650390" duration="1227000" />
+      <workItem from="1678789439415" duration="933000" />
+      <workItem from="1679234023037" duration="81000" />
+      <workItem from="1679243312864" duration="372000" />
+      <workItem from="1679305267461" duration="3741000" />
+      <workItem from="1679390193649" duration="2443000" />
+      <workItem from="1679464973162" duration="55000" />
+      <workItem from="1681114338634" duration="11919000" />
+      <workItem from="1681197379045" duration="8882000" />
+      <workItem from="1681284155407" duration="766000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1666782062098</created>
@@ -236,7 +260,28 @@
       <option name="project" value="LOCAL" />
       <updated>1666874815824</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="интеграция опросов с телегаммом">
+      <created>1667302229427</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1667302229427</updated>
+    </task>
+    <task id="LOCAL-00007" summary="интеграция опросов с телегаммом, вебхуки">
+      <created>1667302276189</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1667302276189</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Правки по верстке и файлу readmi">
+      <created>1681130410578</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1681130410578</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -260,6 +305,9 @@
     <MESSAGE value="доработка ответов" />
     <MESSAGE value="migration" />
     <MESSAGE value="README и localtunnel" />
-    <option name="LAST_COMMIT_MESSAGE" value="README и localtunnel" />
+    <MESSAGE value="интеграция опросов с телегаммом" />
+    <MESSAGE value="интеграция опросов с телегаммом, вебхуки" />
+    <MESSAGE value="Правки по верстке и файлу readmi" />
+    <option name="LAST_COMMIT_MESSAGE" value="Правки по верстке и файлу readmi" />
   </component>
 </project>

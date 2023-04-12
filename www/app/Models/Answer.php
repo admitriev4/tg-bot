@@ -14,10 +14,12 @@ class Answer extends Model
     use HasFactory, Notifiable;
     public function addAnswer(Request $request) {
         $req = DB::table('answers')->insert([
+            'servey' => $request->servey,
             'answer' => $request->answer,
-            'name_user_tg' => $request->answer,
-            'chat_id' => $request->answer,
-            'passage_time' => $request->answer,
+            'name_user_tg' => $request->name_user_tg,
+            'chat_id' => $request->chat_id,
+            'passage_time' => $request->passage_time,
+            'date_answer' => $request->date_answer,
         ]);
         return $req;
     }
@@ -29,7 +31,7 @@ class Answer extends Model
     public function getAnswer($id) {
 
         $servey = DB::table('answers')
-            ->select('id', 'answer','name_user_tg', 'chat_id', 'passage_time', 'create_at')
+            ->select('id', 'servey', 'answer', 'name_user_tg', 'chat_id', 'passage_time', 'date_answer')
             ->where('id', '=', $id)
             ->get();
         return $servey;

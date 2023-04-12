@@ -16,6 +16,7 @@ class CreateAnswersTable extends Migration
         Schema::create('answers', function (Blueprint $table) {
             $table->id();
             $table->bigInteger('servey')->unsigned();
+            $table->string('answer');
             $table->string('name_user_tg');
             $table->string('chat_id');
             $table->string('passage_time');
