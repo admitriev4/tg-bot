@@ -39,18 +39,10 @@ class ServeyController extends Controller
     public function getListServey() {
         $model = new Servey();
         $serveys = $model->getList();
-        $data = array();
         foreach ($serveys as $servey) {
-            $data[] = [
-                ['text' => $servey->question,
-                'callback_data' => "servey_id_".$servey->id],
-            ];
+            $req["servey_id_".$servey->id] =  $servey->question;
         }
-        $req = [
-            'inline_keyboard' => $data
-        ];
-        unset($data);   unset($servey);
-        unset($serveys);    unset($model);
+
         return $req;
     }
     public function getServey($id) {

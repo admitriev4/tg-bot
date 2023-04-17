@@ -28,12 +28,33 @@ class BotController extends Controller
         return $this->telegram->getWebhookUpdates();
     }
 
+    public function prepareButton($text, $callback_data) {
+
+        $req = [
+            'inline_keyboard' => [[[
+                'text' => $text,
+                'callback_data' => $callback_data
+            ],
+            ]]];
+        return $req;
+    }
+    public function prepareArrButtons($arr) {
+        $data = array();
+        foreach ($arr as $key => $value) {
+            $data[] = [[
+                'text' => $value,
+                'callback_data' => $key
+            ],];
+        }
+        $req = ['inline_keyboard' => $data];
+        return $req;
+    }
+
     public function  webhook (Request $request) {
 
         if(!empty($request->input('message'))) {
             if($request->input('message')['text'] == "/start") {
-                $buttons = $this->ServeyController->getListServey();
-                $this->telegram->sendSurvey($request->input('message')['from']['id'], 'Выберите опрос', $buttons);
+                $this->telegram->sendButton($request->input('message')['from']['id'], '', $this->prepareButton('Получить список опросов', 'getServeys'));
             }
         } else {
             $req = $request->input('callback_query');
@@ -42,9 +63,10 @@ class BotController extends Controller
                 $servey = $this->ServeyController->getServey($id);
                 $picture = \request()->getHost() . Storage::url($servey->picture);
                 $this->telegram->sendPhoto($req['from']['id'], $picture, $servey->question);
-
+            } elseif ($req['data'] == "getServeys") {
+                $buttons = $this->prepareArrButtons($this->ServeyController->getListServey());
+                $this->telegram->sendSurvey($request->input('message')['from']['id'], 'Выберите опрос', $buttons);
             }
-
         }
         Log::debug($request->all());
     }

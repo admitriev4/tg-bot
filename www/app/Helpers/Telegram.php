@@ -42,6 +42,14 @@ namespace App\Helpers;
             'reply_markup' => $buttons
         ]);
     }
+    public function sendButton($chatID, $message, $buttons) {
+         return $this->http::post(self::url.$this->bot.'/sendMessage', [
+             'chat_id' => $chatID,
+             'text' => $message,
+             'parse_mode' => "html",
+             'reply_markup' => $buttons
+         ]);
+     }
 
      public function setWebhook($url) {
          return $this->http::get(self::url.$this->bot.'/setWebhook?url='.$url);

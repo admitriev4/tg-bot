@@ -2,11 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5ab15ea9-502f-4acd-b9da-7aff7ea78e49" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/www/database/migrations/2023_04_10_132032_add_serveys.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/app/Http/Controllers/AnswerController.php" beforeDir="false" afterPath="$PROJECT_DIR$/www/app/Http/Controllers/AnswerController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/app/Helpers/Telegram.php" beforeDir="false" afterPath="$PROJECT_DIR$/www/app/Helpers/Telegram.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/www/app/Http/Controllers/BotController.php" beforeDir="false" afterPath="$PROJECT_DIR$/www/app/Http/Controllers/BotController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/app/Models/Answer.php" beforeDir="false" afterPath="$PROJECT_DIR$/www/app/Models/Answer.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/app/Http/Controllers/ServeyController.php" beforeDir="false" afterPath="$PROJECT_DIR$/www/app/Http/Controllers/ServeyController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/resources/views/bot/answers.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/www/resources/views/bot/answers.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -223,7 +223,16 @@
       <workItem from="1679464973162" duration="55000" />
       <workItem from="1681114338634" duration="11919000" />
       <workItem from="1681197379045" duration="8882000" />
-      <workItem from="1681284155407" duration="766000" />
+      <workItem from="1681284155407" duration="1492000" />
+      <workItem from="1681305530651" duration="1210000" />
+      <workItem from="1681372537803" duration="214000" />
+      <workItem from="1681386555689" duration="305000" />
+      <workItem from="1681387325038" duration="969000" />
+      <workItem from="1681388386812" duration="6407000" />
+      <workItem from="1681416817225" duration="609000" />
+      <workItem from="1681451875911" duration="1782000" />
+      <workItem from="1681578365087" duration="41000" />
+      <workItem from="1681674817933" duration="594000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1666782062098</created>
@@ -281,7 +290,14 @@
       <option name="project" value="LOCAL" />
       <updated>1681130410578</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Доработал модель и контролер ответов, поправил миграции">
+      <created>1681285278034</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1681285278034</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -308,6 +324,7 @@
     <MESSAGE value="интеграция опросов с телегаммом" />
     <MESSAGE value="интеграция опросов с телегаммом, вебхуки" />
     <MESSAGE value="Правки по верстке и файлу readmi" />
-    <option name="LAST_COMMIT_MESSAGE" value="Правки по верстке и файлу readmi" />
+    <MESSAGE value="Доработал модель и контролер ответов, поправил миграции" />
+    <option name="LAST_COMMIT_MESSAGE" value="Доработал модель и контролер ответов, поправил миграции" />
   </component>
 </project>
