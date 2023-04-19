@@ -16,11 +16,14 @@ class CreateAnswersTable extends Migration
         Schema::create('answers', function (Blueprint $table) {
             $table->id();
             $table->bigInteger('servey')->unsigned();
-            $table->string('answer');
+            $table->string('answer')->nullable(true);
             $table->string('name_user_tg');
             $table->string('chat_id');
-            $table->string('passage_time');
-            $table->timestamp('date_answer', 0);
+            $table->text('passage_time')->nullable(true);
+            $table->timestamp('date_question_asked', 0)->nullable(true);
+            $table->timestamp('date_answer', 0)->nullable(true);
+            $table->string('question_asked', 1);
+            $table->string('answer_get', 1);
 
 
         });

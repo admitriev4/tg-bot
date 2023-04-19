@@ -19,22 +19,56 @@ class Answer extends Model
             'name_user_tg' => $request->name_user_tg,
             'chat_id' => $request->chat_id,
             'passage_time' => $request->passage_time,
+            'date_question_asked' => $request->date_question_asked,
             'date_answer' => $request->date_answer,
+            'question_asked' => $request->question_asked,
+            'answer_get' => $request->answer_get
         ]);
         return $req;
     }
+
+    public function updateAnswer(Request $request) {
+
+        $req = DB::table('answers')->where('id', "=" , $request->id)->update([
+            'servey' => $request->servey,
+            'answer' => $request->answer,
+            'name_user_tg' => $request->name_user_tg,
+            'chat_id' => $request->chat_id,
+            'passage_time' => $request->passage_time,
+            'date_question_asked' => $request->date_question_asked,
+            'date_answer' => $request->date_answer,
+            'question_asked' => $request->question_asked,
+            'answer_get' => $request->answer_get
+        ]);
+        return $req;
+    }
+
     public function getList()
     {
-        $serveys = DB::table('answers')->get();
-        return $serveys;
+        $answers = DB::table('answers')->get();
+        return $answers;
     }
     public function getAnswer($id) {
 
-        $servey = DB::table('answers')
-            ->select('id', 'servey', 'answer', 'name_user_tg', 'chat_id', 'passage_time', 'date_answer')
+        $answers = DB::table('answers')
+            ->select('id', 'servey', 'answer', 'name_user_tg', 'chat_id', 'passage_time', 'date_question_asked', 'date_answer', 'question_asked', 'answer_get')
             ->where('id', '=', $id)
             ->get();
-        return $servey;
+        return $answers;
+
+    }
+
+
+    public function searchAnswer($chat_id) {
+
+        $answer = DB::table('answers')
+            ->select('id', 'servey', 'answer', 'name_user_tg', 'chat_id', 'passage_time', 'date_question_asked', 'date_answer', 'question_asked', 'answer_get')
+            ->where('chat_id', '=', $chat_id)
+            ->where('question_asked', '=', "Y")
+            ->where('answer_get', '=', "N")
+            ->orderBy('date_question_asked', 'desc')
+            ->first();
+        return $answer;
 
     }
 
