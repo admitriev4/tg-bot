@@ -3,9 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="5ab15ea9-502f-4acd-b9da-7aff7ea78e49" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/app/Http/Controllers/BotController.php" beforeDir="false" afterPath="$PROJECT_DIR$/www/app/Http/Controllers/BotController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/app/Models/Answer.php" beforeDir="false" afterPath="$PROJECT_DIR$/www/app/Models/Answer.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/database/migrations/2022_10_17_073045_create_answers_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/www/database/migrations/2022_10_17_073045_create_answers_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/app/Http/Controllers/ServeyController.php" beforeDir="false" afterPath="$PROJECT_DIR$/www/app/Http/Controllers/ServeyController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/database/migrations/2022_10_17_072623_create_table_servey.php" beforeDir="false" afterPath="$PROJECT_DIR$/www/database/migrations/2022_10_17_072623_create_table_servey.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/database/migrations/2023_04_10_132032_add_serveys.php" beforeDir="false" afterPath="$PROJECT_DIR$/www/database/migrations/2023_04_10_132032_add_serveys.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/resources/views/bot/serveyupdate.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/www/resources/views/bot/serveyupdate.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/www/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -235,7 +237,7 @@
       <workItem from="1681713836174" duration="1184000" />
       <workItem from="1681730427545" duration="1813000" />
       <workItem from="1681801076983" duration="24344000" />
-      <workItem from="1681889224268" duration="5724000" />
+      <workItem from="1681889224268" duration="7705000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1666782062098</created>
@@ -307,7 +309,14 @@
       <option name="project" value="LOCAL" />
       <updated>1681714413054</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="доделал связь с ботом">
+      <created>1681895183495</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1681895183495</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -336,6 +345,7 @@
     <MESSAGE value="Правки по верстке и файлу readmi" />
     <MESSAGE value="Доработал модель и контролер ответов, поправил миграции" />
     <MESSAGE value="приведение в порядок внешнего вида, доработка связи бота и приложения" />
-    <option name="LAST_COMMIT_MESSAGE" value="приведение в порядок внешнего вида, доработка связи бота и приложения" />
+    <MESSAGE value="доделал связь с ботом" />
+    <option name="LAST_COMMIT_MESSAGE" value="доделал связь с ботом" />
   </component>
 </project>

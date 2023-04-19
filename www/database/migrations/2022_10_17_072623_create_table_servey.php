@@ -18,8 +18,8 @@ class CreateTableServey extends Migration
             $table->string('question');
             $table->string('picture');
             $table->string('active');
-            $table->timestamp('active_from');
-            $table->timestamp('active_to');
+            $table->timestamp('active_from')->nullable(true);
+            $table->timestamp('active_to')->nullable(true);
         });
     }
 

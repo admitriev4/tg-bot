@@ -18,14 +18,14 @@ class AddServeys extends Migration
             'picture' => 'public/3k6m0v7KbzvMNpkkpQc5lFkLg7JB6SKzCZGKYbpY.jpg',
             'active' =>"Y",
             'active_from' => date("Y-m-d H:i:s"),
-            'active_to' => date("Y-m-d H:i:s"),
+            'active_to' => null,
         ]);
         DB::table('serveys')->insert([
             'question' => 'Сколько тебе лет?',
             'picture' => 'public/3k6m0v7KbzvMNpkkpQc5lFkLg7JB6SKzCZGKYbpY.jpg',
             'active' =>"Y",
             'active_from' => date("Y-m-d H:i:s"),
-            'active_to' => date("Y-m-d H:i:s"),
+            'active_to' => null,
         ]);
     }
 

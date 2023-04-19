@@ -37,7 +37,10 @@ Route::post('/webhook', [BotController::class, 'webhook']);
 
 
 Route::get('/servey/show/add/', function () { return view('bot.serveyadd', ['title' => 'Добавить опрос']); })->middleware('auth');
-Route::get('/servey/show/update/{id}', function ($id) { return view('bot.serveyupdate', ['title' => 'Обновить опрос', 'id'=> $id]); })->middleware('auth');
+Route::get('/servey/show/update/{id}', function ($id) {
+    $model = new \App\Models\Servey();
+    $servey = $model->getServey($id);
+    return view('bot.serveyupdate', ['title' => 'Обновить опрос', 'id'=> $id, 'servey'=> $servey]); })->middleware('auth');
 Route::get('/servey/show/delete/{id}', function ($id) { return view('bot.serveydelete', ['title' => 'Удалить опрос', 'id'=> $id]); })->middleware('auth');
 Route::post('/servey/add/', [ServeyController::class, 'serveyAdd'])->middleware('auth');
 Route::post('/servey/update/{id}', [ServeyController::class, 'serveyUpdate'])->middleware('auth');
